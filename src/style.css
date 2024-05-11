@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+}
+:root{
+    --white: #ffffff;
+    --pink: #FD5B78;
+    --grenn-primary: #006E51;
+    --blue-second: #232946;
+}
+body{
+    background-repeat: no-repeat;
+    height: 100vh;
+    background: linear-gradient(to top right, #006E51 10%, #FD5B78 80%);
+}
+#navBar-logo{
+    display: flex;
+    margin: auto;
+    padding: 15px 5vw;
+    height: auto;
+}
+#navBar-logo section{
+    flex-basis: 50%;
+}
+#myUL{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+#myUL li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+#myUL li a{
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.3s ease;
+    font-size: 18px;
+}
+#myUL li a:hover{
+    text-decoration: underline;
+    color: var(--blue-second);
+}
+#myUL i{
+    margin-left: 3px;
+}
+.logo{
+    font-size: 25px;
+}
+.logo span{
+    margin-right: 2px;
+}
+.logo span:nth-child(1){
+    color: rgb(6, 255, 6);
+}
+.logo span:nth-child(2){
+    color: var(--white)
+}
+.logo span:nth-child(3){
+    color: red;
+}
+#menu-burger{
+    display: none;
+}
+#baniere{
+    display: flex;
+    padding: 80px 5vw;
+    flex-wrap: wrap;
+}
+#baniere section{
+    flex: 1 0;
+}
+#baniere section:nth-child(1){
+    flex-basis: 40%;
+    text-align: center;
+    color: var(--white);
+}
+#baniere section:nth-child(1) div{
+    width: 270px;
+    background-color: var(--blue-second);
+    padding: 40px 30px;
+    margin: auto;
+    box-shadow: 5px 5px 10px black;
+}
+#baniere section:nth-child(1) h3{
+    letter-spacing: 8px;
+    margin-top: 5px;
+}
+.nom-artiste{
+    color: var(--grenn-primary);
+}
+#baniere section:nth-child(1) img{
+    width: 170px;
+    height: 150px;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+}
+
+#time{
+    margin: 10px 20px;
+    font-size: 12px;
+}
+#time span:nth-child(1){
+    float: left;
+}
+#time span:nth-child(2){
+    float: right;
+}
+.control{
+    margin-top: 30px;
+    color: var(--pink);
+}
+.control i{
+    margin-right: 7px;
+    font-size: 30px;
+}
+.control i:hover{
+    opacity: 0.8;
+}
+.control i:nth-child(2){
+    color: var(--grenn-primary);
+}
+#baniere section:nth-child(2){
+    padding-top: 8vw;
+    color: var(--white);
+    flex-basis: 60%;
+ }
+ #baniere section:nth-child(2) h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+ }
+ #baniere section:nth-child(2) p{
+    width: 80%;
+ }
+ #baniere section:nth-child(2) div{
+    color: var(--white);
+    background-color: var(--pink);
+    font-size: 20px;
+    padding: 5px 7px;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 105px;
+    transition: 1s all ease-in-out;
+    cursor: grab;
+ } 
+#baniere section:nth-child(2) div:hover{
+    background-color: var(--blue-second);
+    border-radius: 10px;
+}
+.opacity{
+    color: var(--white);
+    opacity: 0.5;
+}
+#myAudio{
+    display: block;
+}
+
+@media screen and (max-width : 650px){
+    #myUL{
+        display: none;
+    }
+    .display-ul-resp{
+        display: inline-block !important;
+        margin-top: 25px;
+        animation: displayUl-resp 0.3s ease-in-out;
+    }
+    #myUL li:hover{
+        transform: translateX(-10px) !important;
+    }
+    @keyframes displayUl-resp {
+        0%{
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+    #menu-burger{
+        display: block;
+        font-size: 25px;
+        color: var(--white);
+        cursor: grab;
+    }
+    #menu-burger:hover{
+        color: var(--blue-second);
+    }
+}
